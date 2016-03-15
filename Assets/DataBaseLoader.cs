@@ -4,20 +4,21 @@ using System.Collections.Generic;
 using Mono.Data.Sqlite;
 using System.Data;
 
+/// <summary>
+/// Based on: http://answers.unity3d.com/questions/743400/database-sqlite-setup-for-unity.html
+/// </summary>
 public class DataBaseLoader : MonoBehaviour 
 {
     #region vars
     private SqliteConnection dbconn;
     #endregion
     #region init
-    /// <summary>
-    /// Based on: http://answers.unity3d.com/questions/743400/database-sqlite-setup-for-unity.html
-    /// </summary>
+
     public void OpenDB (string name)
     {
-        string conn = "URI=file:" + Application.streamingAssetsPath + "/"+name; //Path to database.
+        string conn = "URI=file:" + Application.streamingAssetsPath + "/"+name;
         dbconn = new SqliteConnection(conn);
-        dbconn.Open(); //Open connection to the database.
+        dbconn.Open();
     }
 
     public void CloseDB()
