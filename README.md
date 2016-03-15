@@ -1,14 +1,14 @@
-# SQLiteDBExample
+# SQLite DataBase Example
 
 Allows reading and writing to an SQLite database from Unity.
 
 Works in the Unity Editor and as a 64-bit Windows build.
 
-Project based on http://answers.unity3d.com/questions/743400/database-sqlite-setup-for-unity.html
+Based on http://answers.unity3d.com/questions/743400/database-sqlite-setup-for-unity.html
 
 ## Step by step instructions for any DIY programmers:
 
-### Getting hold of required DLLs:
+### Getting hold of the required DLLs:
 
 - Download 64-bit sqlite Precompiled Binaries for Windows from http://www.sqlite.org/download.html
 - Copy Mono.Data.Sqlite.dll & System.Data.dll from Unity folder (for example: "C:\Program Files\Unity\Editor\Data\Mono\lib\mono\2.0")
@@ -17,7 +17,7 @@ Project based on http://answers.unity3d.com/questions/743400/database-sqlite-set
 ### Creating a database:
 
 - Create an SQLite database your program of choice (for instance: http://sqliteadmin.orbmu2k.de/)
-- Add database to the "Assets/StreamingAssets" folder
+- Add the database to the "Assets/StreamingAssets" folder
 
 ### Working with the database (example code):
 
@@ -35,7 +35,7 @@ Project based on http://answers.unity3d.com/questions/743400/database-sqlite-set
         dbcmd.Dispose();
         dbcmd = null;
         
-#### Iterating a query (depends on your database, of course):
+#### Iterating the query (depends on your database, of course):
 
 		while (reader.Read())
 		{
@@ -45,7 +45,7 @@ Project based on http://answers.unity3d.com/questions/743400/database-sqlite-set
 			Debug.Log("ID = " + id + "  VALUE = " + value);
 		}
 		
-#### Closing a database:
+#### Closing the database:
 
 		dbconn.Close();
         dbconn = null;
